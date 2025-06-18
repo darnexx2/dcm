@@ -38,17 +38,18 @@ Content-Type: application/json
 
 
 #### Request Body
-
-\`\`\`json
+```json
 {
-"bankAccountId": "string",
-"amount": "string",
-"userId": "string",
-"userName": "string",
-"name": "string",
-"processId": "string"
+  "bankAccountId": "string",
+  "amount": "string",
+  "userId": "string",
+  "userName": "string",
+  "name": "string",
+  "processId": "string",
+  "iban": "string"
 }
-\`\`\`
+```
+
 
 ---
 
