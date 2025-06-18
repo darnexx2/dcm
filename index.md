@@ -59,26 +59,28 @@ Initiates a withdrawal transaction from the user.
 
 #### Headers
 
-\`\`\`
-X-API-KEY: <api-key>
-X-TIMESTAMP: <unix-timestamp>
-X-SIGNATURE: <generated-signature>
+```http
+X-API-KEY: your-api-key
+X-TIMESTAMP: 2025-06-18T12:00:00Z
+X-SIGNATURE: your-generated-signature
 Content-Type: application/json
-\`\`\`
+```
+
 
 #### Request Body
 
-\`\`\`json
+```json
 {
-"bankAccountId": "string",
-"amount": "string",
-"userId": "string",
-"userName": "string",
-"name": "string",
-"processId": "string",
-"iban": "string"
+  "bankAccountId": "string",
+  "amount": "string",
+  "userId": "string",
+  "userName": "string",
+  "name": "string",
+  "processId": "string",
+  "iban": "string"
 }
-\`\`\`
+```
+
 
 ---
 
@@ -88,35 +90,31 @@ Lists active banks available for the user to select.
 
 #### Headers
 
-\`\`\`
-X-API-KEY: <api-key>
-X-TIMESTAMP: <unix-timestamp>
-X-SIGNATURE: <generated-signature>
-\`\`\`
-
+```http
+X-API-KEY: your-api-key
+X-TIMESTAMP: 2025-06-18T12:00:00Z
+X-SIGNATURE: your-generated-signature
+```
 ---
 
 ### ✅ Response Format (Common)
 
-\`\`\`json
+```json
 {
-"transactionId": "string",
-"bankId": "string",
-"amount": 100.00,
-"userId": "string",
-"userName": "string",
-"name": "string",
-"processId": "string",
-"type": "deposit | withdraw",
-"convertedName": "string",
-"status": "string",
-"bank": "string",
-"bankAccountName": "string",
-"bankAccountIban": "string",
-"exAmount": 105.50,
-"exName": 1.05
-}
-\`\`\`
+  "transactionId": "string",
+  "bankId": "string",
+  "amount": 100.00,
+  "userId": "string",
+  "userName": "string",
+  "name": "string",
+  "processId": "string",
+  "type": "deposit | withdraw",
+  "convertedName": "string",
+  "status": "string",
+  "bank": "string",
+  "bankAccountName": "string",
+  "bankAccountIban": "string"
+
 
 ---
 
