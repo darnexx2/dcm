@@ -23,6 +23,39 @@ All endpoints require signature validation. The following headers are mandatory:
 
 ---
 
+# 🔐 Security Guidelines
+
+## 📌 Required Headers
+
+Each request must include the following headers:
+
+```http
+X-API-KEY: your-api-key
+X-TIMESTAMP: 2025-06-18T12:00:00Z
+X-SIGNATURE: your-generated-signature
+Content-Type: application/json
+```
+
+---
+
+## ⏰ Timestamp Validation
+
+To protect against **replay attacks**, the backend verifies the freshness of the `X-TIMESTAMP` header.
+
+### 📅 Format
+The timestamp must be in **ISO-8601** format (e.g., `2025-06-18T12:00:00Z`).
+
+### ❗ Time Window
+Requests older or newer than **±6 hours** from the current server time will be rejected.
+
+### ❌ Example Rejection
+```json
+{
+  "error": "Request timestamp expired"
+}
+```
+
+
 ### 📥 POST `/api/v2/deposit`
 
 Initiates a deposit transaction from the user.
