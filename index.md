@@ -113,7 +113,11 @@ X-SIGNATURE: your-generated-signature
   "status": "string",
   "bank": "string",
   "bankAccountName": "string",
-  "bankAccountIban": "string"
+  "bankAccountIban": "string",
+  "exAmount": 105.50,
+  "exName": 1.05
+}
+```
 
 
 ---
