@@ -17,9 +17,9 @@ All endpoints require signature validation. The following headers are mandatory:
 
 | Endpoint                    | Signature Builder Used         | Message Format                                                   |
 |----------------------------|-------------------------------|-----------------------------------------------------------------|
-| `/api/v2/deposit`          | `DepositSignatureBuilder`      | `X-API-KEY + X-TIMESTAMP + URI + amount + currency`             |
-| `/api/v2/withdraw`         | `WithdrawSignatureBuilder`     | `X-API-KEY + X-TIMESTAMP + URI + amount + currency`             |
-| `/api/v2/available-banks`  | `DefaultSignatureBuilder`      | `X-API-KEY + X-TIMESTAMP + URI`                                 |
+| `/api/v2/deposit`          | `DepositSignature`      | `X-API-KEY + X-TIMESTAMP + URI + amount + currency`             |
+| `/api/v2/withdraw`         | `WithdrawSignature`     | `X-API-KEY + X-TIMESTAMP + URI + amount + currency`             |
+| `/api/v2/available-banks`  | `DefaultSignature`      | `X-API-KEY + X-TIMESTAMP + URI`                                 |
 
 ---
 
