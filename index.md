@@ -29,12 +29,13 @@ Initiates a deposit transaction from the user.
 
 #### Headers
 
-\`\`\`
-X-API-KEY: <api-key>
-X-TIMESTAMP: <unix-timestamp>
-X-SIGNATURE: <generated-signature>
+```http
+X-API-KEY: your-api-key
+X-TIMESTAMP: 2024-06-18T12:00:00Z
+X-SIGNATURE: your-signature
 Content-Type: application/json
-\`\`\`
+```
+
 
 #### Request Body
 
