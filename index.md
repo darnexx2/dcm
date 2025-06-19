@@ -15,11 +15,11 @@ All endpoints require signature validation. The following headers are mandatory:
 
 ### ✍️ Signature Generation Formats
 
-| Endpoint                    | Signature Builder Used         | Message Format                                                   |
-|----------------------------|-------------------------------|-----------------------------------------------------------------|
-| `/api/v2/deposit`          | `DepositSignature`      | `X-API-KEY + X-TIMESTAMP + URI + amount + currency`             |
-| `/api/v2/withdraw`         | `WithdrawSignature`     | `X-API-KEY + X-TIMESTAMP + URI + amount + currency`             |
-| `/api/v2/available-banks`  | `DefaultSignature`      | `X-API-KEY + X-TIMESTAMP + URI`                                 |
+| Endpoint                    | Signature Builder Used         | Message Format                                                                 |
+|----------------------------|-------------------------------|--------------------------------------------------------------------------------|
+| `/api/v2/deposit`          | `DepositSignature`            | `X-API-KEY + X-TIMESTAMP + URI + bankAccountId + amount + userId + userName + name + processId` |
+| `/api/v2/withdraw`         | `WithdrawSignature`           | `X-API-KEY + X-TIMESTAMP + URI + bankAccountId + amount + userId + userName + name + processId + iban` |
+| `/api/v2/available-banks`  | `DefaultSignature`            | `X-API-KEY + X-TIMESTAMP + URI`                                                |
 
 ---
 
@@ -157,7 +157,6 @@ X-SIGNATURE: your-generated-signature
 
 ### 🛡️ Notes
 
-- Even if the `currency` field is missing in the JSON, it is included as an empty string during signature generation.
 - All date and numeric values should be sent in UTC and ISO 8601 format if applicable.
 - If signature validation fails, the server responds with `401 Unauthorized`.
 
